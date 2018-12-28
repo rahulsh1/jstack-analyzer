@@ -1,6 +1,7 @@
 # jstack-analyzer
 Analyzes Hotspot/OpenJDK Jstacks and generates a HTML and flamegraphs views for inspecting the expensive paths.
 
+[![Build Status](https://travis-ci.org/rahulsh1/jstack-analyzer.svg?branch=master)](https://travis-ci.org/rahulsh1/jstack-analyzer)
 
 ## Collecting JStacks
 
@@ -30,6 +31,10 @@ Analyzes Hotspot/OpenJDK Jstacks and generates a HTML and flamegraphs views for 
     ./sample/thread-tree.txt
     ./sample/thread-tree.htm
 
+
+### Flamegraph
+
+Taken from Brendan Gregg's awesome [flamegraphs](https://github.com/brendangregg/FlameGraph)
 
 # License
 BSD
