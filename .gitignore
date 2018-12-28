@@ -43,4 +43,5 @@ bin/
 
 # merge tooling
 *.orig
+jstack_*
 
