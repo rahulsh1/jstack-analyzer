@@ -2,7 +2,7 @@
  * Copyright (c) 2018, Rahul S. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
  */
-package net.jstack;
+package net.jstack.util;
 
 import net.jstack.util.ThreadDump;
 import org.junit.Test;
@@ -21,7 +21,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-public class TestThreadDump {
+public class ThreadDumpTest {
 
   @Test
   public void testAllFiles() throws IOException {

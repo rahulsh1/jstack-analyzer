@@ -17,7 +17,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestThreadManager {
+public class ThreadManagerTest {
 
   @Test
   public void testTreeOutput() throws IOException {

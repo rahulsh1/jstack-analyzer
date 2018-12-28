@@ -23,7 +23,7 @@ public final class StackParserUtils {
    * @param line the thread info.
    * @return thread tokens.
    */
-  public static ThreadData parseThreadLineOne(String line) {
+  static ThreadData parseThreadLineOne(String line) {
     ThreadData threadData = null;
     if (line.indexOf('"') >= 0) {
       threadData = new ThreadData(line.substring(1, line.lastIndexOf('"') == 0 ? line.length() - 1 : line.lastIndexOf('"')));
@@ -41,24 +41,10 @@ public final class StackParserUtils {
     return threadData;
   }
 
-  public static void parseThreadLineTwo(String line, ThreadData threadData) {
+  static void parseThreadLineTwo(String line, ThreadData threadData) {
     if (line.contains("java.lang.Thread.State")) {
       threadData.setState(fromState(getPart(line, "java.lang.Thread.State: ")));
     }
-  }
-
-  public static long parseFileTimestamp(Path file) {
-    long timestamp = 0;
-    try {
-      String filename = file.getFileName().toString();
-      int idx = filename.indexOf('.');
-      if (idx > 0) {
-        String dt = filename.substring(0, filename.indexOf('.'));
-        timestamp = DATE_FORMAT_FILE.parse(dt).getTime();
-      }
-    } catch (ParseException e) {
-    }
-    return timestamp;
   }
 
   private static String getPart(String line, String startToken) {
